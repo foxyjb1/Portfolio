@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/img/icons/logo-perfil.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Portfolio</title>
+
+    <script src="src/scripts/filtro.js"></script>
+    <script src="src/scripts/projetcs.js"></script>
+       
+</head>
+<body >
+    <header class="top-header">
+        <div class="logo">
+          <a href="index.html"><img src="src/img/icons/logo-perfil.png" alt="logo" height="40"></a>
+        </div>
+        <nav class="menu">
+            <ul>
+              <li><a href="#bio">bio</a></li>
+              <li><a href="#projects">projects</a></li>
+              <li>
+                <a href="src/downloads/CurriculoJoshua.pdf" class="cv" download>
+                  <i class="fas-fa-download"><img src="src/img/icons/download.png" alt=""> </i>   CV
+                </a>
+              </li>
+            </ul>
+          </nav>
+      </header>
+
+<!-- Faixa com nome e título -->
+    <section class="intro-banner">
+        <div class="intro-content">
+            <h1>JOSHUA</h1>
+            <h2>developer  back-end/game</h2>
+        </div>
+    </section>
+
+    
+    <div class="scroll-indicator">
+        <img src="src/img/icons/down.png" alt="scroll down">
+    </div>
+      
+
+
+    <!-- Sobre Mim -->
+    <section class="bio" id="bio">
+        <div class="bio-model">
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+            <model-viewer 
+                src="src/img/model3d/foto-perfil-portifolio.glb" 
+                alt="Um modelo 3D" 
+                auto-rotate 
+                camera-controls 
+                ar 
+                background-color="#ffffff"
+                class="modelo-3d">
+            </model-viewer>
+        </div>
+        
+        <div class="bio-text">
+            <h2>Bio</h2>
+            <p>
+            I'm a back-end developer studying to become a game dev. <br> I have experience with:
+
+            </p>
+            <ul class="tags">
+                <li class="java">Java</li>
+                <li class="mysql">mySql</li>
+                <li class="python">Python</li>
+                <li class="html">html</li>
+                <li class="css">css</li>
+                <li class="js">js</li>
+                <li class="csharp">c#</li>
+                <li class="blender">blender</li>
+                <li class="aseprite">aseprite</li>
+
+            </ul>
+        </div>
+        
+    </section>
+    
+    <!-- projects -->
+    <section class="projects" id="projects">
+        <h2>My projects</h2>
+
+        <div class="area-projects">
+    
+            <!-- Filtros -->
+            <div class="filters">
+                <h3>Filtro</h3>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="all" checked> All
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="java"> Java
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="mysql"> MySql
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" value="python"> Python
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="html"> HTML
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="css"> CSS
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="js"> JavaScript
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="csharp"> C#
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="blender"> Blender
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <input type="checkbox" value="aseprite"> Aseprite
+                    <span class="checkmark"></span>
+                </label>
+
+                
+            </div>
+
+
+            <!-- Portifolio -->
+            <div class="cards">
+                <div class="card" onclick="openProjects('portfolio')">
+                    <img src="src/img/projetoPortfolioPrint.png" alt="">
+                    <h3>Portfolio</h3>
+                    <ul>
+                        <li class="html">Html</li>
+                        <li class="css">CSS</li>
+                        <li class="js">Js</li>
+                        <li class="blender">Blender</li>
+
+                    </ul>
+                    <p>I made this website to showcase my work to people and recruiters.</p>
+                </div>
+
+                <div class="card" onclick="openProjects('wagon')">
+                    <img src="src/img/wagon.jpg" alt="Wagon">
+                    <h3>Wagon</h3>
+                    <ul>
+                        <li class="blender">Blender</li>
+
+                    </ul>
+                    <p>From Video to 3D: Reconstructing a Submerged Frame</p>
+                </div>
+
+                <div class="card" onclick="openProjects('bmo')">
+                    <img src="src/img/bmo.jpg" alt="BMO">
+                    <h3>BMO</h3>
+                    <ul>
+                        <li class="blender">Blender</li>
+
+                    </ul>
+                    <p>BMO Reimagined in a Realistic Style</p>
+                </div>
+
+
+
+                
+               <!-- daydone -->
+
+            </div>
+        </div>   
+    
+        <!-- Modais escondidos -->
+        <div id="portfolio" class="modal">
+            <div class="modal-content">
+                
+                <span onclick="closeProject('portfolio')" class="close">&times;</span>
+                <h3>Portfolio</h3>
+                <img src="src/img/projetoPortfolioPrint.png" alt="">
+                <ul>
+                    <li class="html">Html</li>
+                    <li class="css">CSS</li>
+                    <li class="js">Js</li>
+                    <li class="blender">Blender</li>
+                </ul>
+                <p>
+                    This portfolio was developed to showcase my projects, skills, and experiences as a back-end 
+                    developer and future game developer. The website was built using HTML, CSS, and JavaScript,
+                    features a responsive design, and includes integration with 3D models, as well as links to 
+                    download my résumé and smooth navigation between sections.
+                </p>
+            
+            
+                <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="github-btn">
+                        <img src="src/img/icons/github.png" alt="GitHub" class="github-icon"> Veiw GitHub
+                </a>
+            </div>
+   
+        </div>
+        
+        <div id="wagon" class="modal">
+            <div class="modal-content">
+                
+                <span onclick="closeProject('wagon')" class="close">&times;</span>
+                <h3>Wagon</h3>
+                <img src="src/img/wagon.jpg" alt="">
+                <ul>
+
+                    <li class="blender">Blender</li>
+                </ul>
+                <p>
+                    This portfolio was developed to showcase my projects, skills, and experiences as a back-end 
+                    developer and future game developer. The website was built using HTML, CSS, and JavaScript,
+                    features a responsive design, and includes integration with 3D models, as well as links to 
+                    download my résumé and smooth navigation between sections.
+                </p>
+            
+            
+                <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="github-btn">
+                        <img src="src/img/icons/github.png" alt="GitHub" class="github-icon"> Veiw GitHub
+                </a>
+            </div>
+        </div>    
+
+        <div id="bmo" class="modal">
+            <div class="modal-content">
+                
+                <span onclick="closeProject('bmo')" class="close">&times;</span>
+                <h3>Bmo</h3>
+                <img src="src/img/bmo.jpg" alt="">
+                <ul>
+
+                    <li class="blender">Blender</li>
+                </ul>
+                <p>
+                    This portfolio was developed to showcase my projects, skills, and experiences as a back-end 
+                    developer and future game developer. The website was built using HTML, CSS, and JavaScript,
+                    features a responsive design, and includes integration with 3D models, as well as links to 
+                    download my résumé and smooth navigation between sections.
+                </p>
+            
+            
+                <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank" class="github-btn">
+                        <img src="src/img/icons/github.png" alt="GitHub" class="github-icon"> Veiw GitHub
+                </a>
+            </div>
+        </div>    
+        
+
+        
+    </section>
+
+    <footer class="footer">
+
+        <div class="signature">
+            <img  class="logo_footer" src="src/img/icons/logo-perfil.png" alt="logo_footer">
+            <p>© 2025 Hamilton Joshua. All rights reserved.</p>
+        </div>
+            
+            
+        <div class="social-links-img">
+            <a href="https://wa.me/+393446102507?text=Hi, I saw your website that you are a developer" target="_blank">
+                <img src="src/img/icons/whatsapp.png" alt="zapp"></a>
+            <a href="https://github.com/foxyjb1" target="_blank" ><img src="src/img/icons/github (1).png" alt="github"></a>
+            <a href="https://www.linkedin.com/in/joshua-barragan-2083a3270/" target="_blank"><img src="src/img/icons/linkedin.png" alt="linkedin"></a>
+            <a href="https://www.instagram.com/joshua_b_f/" target="_blank"><img src="src/img/icons/instagram.png" alt="instagram"></a>
+    
+        </div>
+            
+  
+
+    </footer>
+
+
+   
+</body>
+</html>
