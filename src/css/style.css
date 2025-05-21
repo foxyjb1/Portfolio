@@ -141,14 +141,15 @@
   font-weight: 900;
   letter-spacing: 2px;
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  -webkit-text-stroke: 2px #111111;
 }
 
 .intro-content h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-top: 12px;
   font-weight: 300;
   color: white;
-  
+  -webkit-text-stroke: 0.5px #111111;  
 }
 
 
@@ -269,6 +270,7 @@
   align-items: center;
   cursor: pointer;
   margin-bottom: 16px;
+  margin-left: 10px;
   font-size: 15px;
   color: #ccc;
   transition: color 0.3s;
@@ -348,7 +350,10 @@
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
 }
-
+.card img {
+  max-height: 100px;
+  max-width: 100%;
+}
 .card ul {
   display: flex;
   flex-wrap: wrap;
@@ -417,6 +422,7 @@
 }
 
 .modal-content img {
+  max-width: 100px ;
   max-width: 100%;
   border-radius: 12px;
   margin-bottom: 20px;
@@ -447,6 +453,13 @@
   line-height: 1.6;
 
 }
+.reference{
+  color: #a47200 ;
+  text-decoration: none;
+}
+.reference:hover{
+   color: #ca9821
+}
 
 .close {
   position: absolute;
@@ -473,7 +486,7 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-.github-btn {
+.btn-link-modal {
   display: inline-flex;
   align-items: center;
   margin-top: 20px;
@@ -486,16 +499,16 @@
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
-.github-btn img{
+.btn-link-modal img{
   margin: 0px;
   margin-inline-end: 6px;
 }
 
-.github-btn:hover {
+.btn-link-modal:hover {
   background-color: #a47200;
 }
 
-.github-icon {
+.icon-link-modal {
   width: 40px;
   height: 40px;
   margin-right: 8px;
